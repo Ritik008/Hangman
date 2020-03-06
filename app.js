@@ -1,4 +1,22 @@
-const game1 = new Hangman("car parts", 2);
+let words = [
+	"Airport",
+	"car parts",
+	"cat",
+	"Dog",
+	"Clock",
+	"Compass",
+	"Computer",
+	"Torch",
+	"Swimming Pool",
+	"Sun",
+	"Software",
+	"hardware",
+	"Ice",
+	"Game",
+	"garden"
+];
+let random = words[Math.floor(Math.random() * words.length)];
+const game1 = new Hangman(random, 5);
 let puzzle = document.createElement("p");
 puzzle.textContent = game1.puzzle;
 let gusses = document.createElement("p");
